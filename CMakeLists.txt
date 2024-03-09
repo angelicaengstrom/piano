@@ -22,3 +22,7 @@ set_target_properties(piano PROPERTIES
         WIN64_EXECUTABLE ON
         MACOSX_BUNDLE ON
         )
+
+enable_testing()
+add_executable(tester test/tester.cpp)
+add_test(Tester tester)
