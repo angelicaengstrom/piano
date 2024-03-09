@@ -1,14 +1,24 @@
 cmake_minimum_required(VERSION 3.20)
-project(piano)
+project(piano
+        LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 14)
-set(CMAKE_PREFIX_PATH "C:\\Qt\\6.2.2\\mingw_64\\lib\\cmake\\")
-
-find_package(Qt6Widgets REQUIRED)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTOUIC ON)
-set(CMAKE_AUTORCC ON)
 
-add_executable(piano main.cpp mainwindow.cpp)
-target_link_libraries(piano Qt6::Widgets)
+find_package(Qt6 REQUIRED COMPONENTS Widgets)
+
+add_executable(
+        piano
+        mainwindow.ui
+        mainwindow.cpp
+        main.cpp)
+
+target_link_libraries(piano PRIVATE Qt6::Widgets)
+
+set_target_properties(piano PROPERTIES
+        WIN64_EXECUTABLE ON
+        MACOSX_BUNDLE ON
+        )
