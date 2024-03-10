@@ -12,9 +12,9 @@ find_package(Qt6 REQUIRED COMPONENTS Widgets)
 
 add_executable(
         piano
-        mainwindow.ui
-        mainwindow.cpp
-        main.cpp)
+        src/mainwindow.ui
+        src/mainwindow.cpp
+        src/main.cpp)
 
 target_link_libraries(piano PRIVATE Qt6::Widgets)
 
