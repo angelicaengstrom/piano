@@ -32,9 +32,6 @@ jobs:
         run: |
           git fetch --all --tags -f
 
-      - name: Set up MinGW
-        uses: egor-tensin/setup-mingw@v2
-
       - name: Install Qt
         uses: jurplel/install-qt-action@v3
         with:
