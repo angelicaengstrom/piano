@@ -4,25 +4,15 @@ project(piano
 
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTOUIC ON)
 
 find_package(Qt6 REQUIRED COMPONENTS Widgets)
 
-add_executable(
-        piano
-        src/mainwindow.ui
-        src/mainwindow.cpp
-        src/main.cpp)
+include_directories(${CMAKE_SOURCE_DIR})
 
-target_link_libraries(piano PRIVATE Qt6::Widgets)
+add_executable(piano)
 
-set_target_properties(piano PROPERTIES
-        WIN64_EXECUTABLE ON
-        MACOSX_BUNDLE ON
-        )
-
+add_subdirectory(src)
 enable_testing()
-add_executable(tester test/tester.cpp)
-add_test(Tester tester)
+add_subdirectory(test)

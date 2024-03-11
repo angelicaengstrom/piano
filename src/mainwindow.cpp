@@ -1,19 +1,17 @@
-//
-// Created by angel on 2024-03-09.
-//
+// Copyright 2014 Angelica Engström
 
-// You may need to build the project (run Qt uic code generator) to get "ui_MainWindow.h" resolved
+// You may need to build the project (run Qt uic code generator)
+// to get "ui_MainWindow.h" resolved
 
-#include "mainwindow.h"
-#include "ui_MainWindow.h"
-
+#include "./src/mainwindow.h"
+#include "./ui_MainWindow.h"
 
 MainWindow::MainWindow(QWidget *parent) :
-	QWidget(parent), ui(new Ui::MainWindow) {
-	ui->setupUi(this);
+    QWidget(parent), ui(new Ui::MainWindow) {
+  ui->setupUi(this);
 }
 
 MainWindow::~MainWindow() {
-	delete ui;
+  delete ui;
 }
 
