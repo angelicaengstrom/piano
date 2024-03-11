@@ -28,7 +28,7 @@ jobs:
           submodules: recursive
 
       - name: Get all tags for correct version determination
-        working-directory: ${{ github.workspace }}
+        working-directory: ${{ env.SOURCE_DIR }}
         run: |
           git fetch --all --tags -f
 
