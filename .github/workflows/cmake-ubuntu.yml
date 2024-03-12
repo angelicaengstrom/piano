@@ -35,6 +35,8 @@ jobs:
           host: 'linux'
           target: 'desktop'
           arch: 'linux_gcc_64'
+          dir: ${{ runner.temp }}
+          setup-python: false
 
       - name: Configure Cmake
         run: cmake -Stest -Bbuild -DENABLE_TEST_COVERAGE=1 -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
