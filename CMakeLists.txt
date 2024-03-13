@@ -14,5 +14,4 @@ include_directories(${CMAKE_SOURCE_DIR})
 add_executable(piano)
 
 add_subdirectory(src)
-enable_testing()
 add_subdirectory(test)
