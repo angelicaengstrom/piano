@@ -38,7 +38,7 @@ jobs:
           dir: ${{ runner.temp }}
 
       - name: Configure Cmake
-        run: cmake -Stest -Bbuild -DENABLE_TEST_COVERAGE=1 -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
+        run: cmake -Stest -Bbuild -DENABLE_TEST_COVERAGE=0 -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
 
       - name: Build
         run: cmake --build build -j4

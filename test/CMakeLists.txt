@@ -11,7 +11,7 @@ add_executable(Tester tester.cpp)
 add_test(Tester tester)
 
 # ---- code coverage ----
-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ../cmake)
 
 if(ENABLE_TEST_COVERAGE)
     include(CodeCoverage.cmake)
