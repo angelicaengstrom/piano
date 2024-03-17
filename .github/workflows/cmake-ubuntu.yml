@@ -10,7 +10,7 @@ env:
   CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
   SOURCE_DIR: ${{ github.workspace }}
   QT_VERSION: 6.6.0
-  BUILD_TYPE: Debug
+  BUILD_TYPE: Release
 
 jobs:
   build:
@@ -38,12 +38,10 @@ jobs:
           dir: ${{ runner.temp }}
 
       - name: Configure Cmake
-        run: cmake -Stest -Bbuild -DENABLE_TEST_COVERAGE=0
+        run: cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
 
       - name: Build
-        run: |
-          cd build
-          cmake --build build -j4
+        run: make
 
       - name: Test
         run: ctest

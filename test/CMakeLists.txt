@@ -6,9 +6,9 @@ option(ENABLE_TEST_COVERAGE "Enable test coverage" OFF)
 # ---- Add Tests ----
 
 include(CTest)
-enable_testing()
 
 add_executable(Tester tester.cpp)
+enable_testing()
 add_test(Tester tester)
 
 # ---- code coverage ----
