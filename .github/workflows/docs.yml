@@ -7,6 +7,8 @@ name: Doxygen Action
 on:
   push:
     branches: [ master ]
+  pull_request:
+    branches: [ "master" ]
 
 
 
@@ -28,7 +30,7 @@ jobs:
           # Path to Doxyfile
           doxyfile-path: "./docs/Doxyfile"
           # Working directory
-          working-directory: "./src" # default is .
+          working-directory: "." # default is .
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
