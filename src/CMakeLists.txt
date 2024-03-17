@@ -5,4 +5,4 @@ set_target_properties(${PROJECT_NAME} PROPERTIES
         MACOSX_BUNDLE ON
         )
 
-target_sources(${PROJECT_NAME} PRIVATE main.cpp mainwindow.cpp mainwindow.ui)
+target_sources(${PROJECT_NAME} PRIVATE main.cpp mainwindow.cpp ui/MainWindow.ui)
