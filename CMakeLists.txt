@@ -4,21 +4,15 @@ project(piano
 
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTOUIC ON)
+SET(CMAKE_AUTOUIC_SEARCH_PATHS ${CMAKE_CURRENT_SOURCE_DIR}/src/ui)
 
 find_package(Qt6 REQUIRED COMPONENTS Widgets)
 
-add_executable(
-        piano
-        mainwindow.ui
-        mainwindow.cpp
-        main.cpp)
+include_directories(${CMAKE_SOURCE_DIR})
 
-target_link_libraries(piano PRIVATE Qt6::Widgets)
+add_executable(piano)
 
-set_target_properties(piano PROPERTIES
-        WIN64_EXECUTABLE ON
-        MACOSX_BUNDLE ON
-        )
+add_subdirectory(src)
+add_subdirectory(test)
