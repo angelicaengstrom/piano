@@ -41,12 +41,12 @@ jobs:
         run: cmake -Stest -Bbuild -DENABLE_TEST_COVERAGE=0
 
       - name: Build
-        run: cmake --build build -j4
-
-      - name: Test
         run: |
           cd build
-          ctest
+          cmake --build build -j4
+
+      - name: Test
+        run: ctest
 
       - name: Collect code coverage
         run: bash <(curl -s https://codecov.io/bash) || echo "Codecov did not collect coverage reports"
