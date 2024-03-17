@@ -38,7 +38,7 @@ jobs:
           dir: ${{ runner.temp }}
 
       - name: Configure Cmake
-        run: cmake -Stest -Bbuild -DENABLE_TEST_COVERAGE=0 -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
+        run: cmake -Stest -Bbuild -DENABLE_TEST_COVERAGE=0
 
       - name: Build
         run: cmake --build build -j4
@@ -46,7 +46,7 @@ jobs:
       - name: Test
         run: |
           cd build
-          ctest --build-config ${{env.BUILD_TYPE}}
+          ctest
 
       - name: Collect code coverage
         run: bash <(curl -s https://codecov.io/bash) || echo "Codecov did not collect coverage reports"
