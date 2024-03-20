@@ -9,12 +9,102 @@
             <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>400</width>
-                <height>300</height>
+                <width>800</width>
+                <height>500</height>
             </rect>
         </property>
+        <property name="minimumSize">
+            <size>
+                <width>800</width>
+                <height>500</height>
+            </size>
+        </property>
+        <property name="maximumSize">
+            <size>
+                <width>800</width>
+                <height>500</height>
+            </size>
+        </property>
+        <property name="palette">
+            <palette>
+                <active>
+                <colorrole role="Button">
+                    <brush brushstyle="SolidPattern">
+                        <color alpha="255">
+                            <red>144</red>
+                            <green>194</green>
+                            <blue>231</blue>
+                        </color>
+                    </brush>
+                </colorrole>
+                    <colorrole role="Window">
+                        <brush brushstyle="SolidPattern">
+                            <color alpha="255">
+                                <red>56</red>
+                                <green>59</green>
+                                <blue>83</blue>
+                            </color>
+                        </brush>
+                    </colorrole>
+                    <colorrole role="WindowText">
+                        <brush brushstyle="SolidPattern">
+                            <color alpha="255">
+                                <red>216</red>
+                                <green>208</green>
+                                <blue>208</blue>
+                            </color>
+                        </brush>
+                    </colorrole>
+                </active>
+            </palette>
+        </property>
+        <widget class="QWidget" name="centralwidget">
+            <property name="palette">
+                <palette>
+                    <active/>
+                    <inactive/>
+                    <disabled/>
+                </palette>
+            </property>
+            <layout class="QGridLayout" name="gridlayout">
+                <item row="2" column="0">
+                    <widget class="QPushButton" name="pushButton">
+                        <property name="text">
+                            <string>Record</string>
+                        </property>
+                    </widget>
+                </item>
+                <item row="2" column="1">
+                    <widget class="QLabel" name="label_2">
+                        <property name="text">
+                            <string>s</string>
+                        </property>
+                    </widget>
+                </item>
+                <item row="0" column="0">
+                    <widget class="QLabel" name="label">
+                        <property name="text">
+                            <string>Virtual Piano</string>
+                        </property>
+                        <property name="font">
+                            <font>
+                                <family>Segoe UI Black</family>
+                                <pointsize>28</pointsize>
+                                <bold>true</bold>
+                            </font>
+                        </property>
+                        <property name="alignment">
+                            <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="margin">
+                            <number>20</number>
+                        </property>
+                    </widget>
+                </item>
+            </layout>
+        </widget>
         <property name="windowTitle">
-            <string>MainWindow</string>
+            <string>Virtual Piano</string>
         </property>
     </widget>
     <pixmapfunction/>
