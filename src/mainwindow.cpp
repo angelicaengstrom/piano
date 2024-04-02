@@ -7,8 +7,11 @@
 #include "./ui_MainWindow.h"
 
 MainWindow::MainWindow(QWidget *parent) :
-    QWidget(parent), ui(new Ui::MainWindow) {
+    QWidget(parent), ui(new Ui::MainWindow), piano(std::make_unique<Piano>()) {
   ui->setupUi(this);
+
+  auto central_widget = findChild<QWidget*>("centralwidget");
+  auto grid_layout = central_widget->findChild<QGridLayout*>("gridlayout");
 }
 
 MainWindow::~MainWindow() {

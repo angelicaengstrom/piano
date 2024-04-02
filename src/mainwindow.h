@@ -3,7 +3,8 @@
 #ifndef SRC_MAINWINDOW_H_
 #define SRC_MAINWINDOW_H_
 
-#include <QWidget>
+#include "Piano.h"
+#include <memory>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -16,6 +17,7 @@ class MainWindow : public QWidget {
   ~MainWindow() override;
  private:
   Ui::MainWindow *ui;
+  std::unique_ptr<Piano> piano;
 };
 
 #endif  // SRC_MAINWINDOW_H_
