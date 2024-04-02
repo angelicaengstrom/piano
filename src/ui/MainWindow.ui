@@ -28,15 +28,6 @@
         <property name="palette">
             <palette>
                 <active>
-                <colorrole role="Button">
-                    <brush brushstyle="SolidPattern">
-                        <color alpha="255">
-                            <red>144</red>
-                            <green>194</green>
-                            <blue>231</blue>
-                        </color>
-                    </brush>
-                </colorrole>
                     <colorrole role="Window">
                         <brush brushstyle="SolidPattern">
                             <color alpha="255">
@@ -49,9 +40,9 @@
                     <colorrole role="WindowText">
                         <brush brushstyle="SolidPattern">
                             <color alpha="255">
-                                <red>216</red>
-                                <green>208</green>
-                                <blue>208</blue>
+                                <red>255</red>
+                                <green>255</green>
+                                <blue>255</blue>
                             </color>
                         </brush>
                     </colorrole>
@@ -59,6 +50,18 @@
             </palette>
         </property>
         <widget class="QWidget" name="centralwidget">
+            <property name="maximumSize">
+                <size>
+                    <width>800</width>
+                    <height>500</height>
+                </size>
+            </property>
+            <property name="minimumSize">
+                <size>
+                    <width>800</width>
+                    <height>500</height>
+                </size>
+            </property>
             <property name="palette">
                 <palette>
                     <active/>
@@ -67,10 +70,28 @@
                 </palette>
             </property>
             <layout class="QGridLayout" name="gridlayout">
+                <property name="leftMargin">
+                    <number>10</number>
+                </property>
+                <property name="topMargin">
+                    <number>10</number>
+                </property>
+                <property name="rightMargin">
+                    <number>10</number>
+                </property>
+                <property name="bottomMargin">
+                    <number>10</number>
+                </property>
                 <item row="2" column="0">
                     <widget class="QPushButton" name="pushButton">
                         <property name="text">
                             <string>Record</string>
+                        </property>
+                        <property name="maximumSize">
+                            <size>
+                                <width>50</width>
+                                <height>30</height>
+                            </size>
                         </property>
                     </widget>
                 </item>
@@ -81,7 +102,202 @@
                         </property>
                     </widget>
                 </item>
-                <item row="0" column="0">
+                <item row="3" column="0" colspan="2">
+                    <layout class="QVBoxLayout" name="pianoLayout">
+                        <item>
+                            <layout class="QHBoxLayout" name="horizontalLayout_2">
+                                <item>
+                                    <widget class="QPushButton" name="C_sharp">
+                                        <property name="sizePolicy">
+                                            <sizepolicy hsizetype="Maximum" vsizetype="Minimum">
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                        </property>
+                                        <property name="minimumSize">
+                                            <size>
+                                                <width>0</width>
+                                                <height>0</height>
+                                            </size>
+                                        </property>
+                                        <property name="styleSheet">
+                                            <string notr="true">background-color: rgb(0, 0, 0);color: rgb(255, 255, 255);</string>
+                                        </property>
+                                        <property name="text">
+                                            <string>C#</string>
+                                        </property>
+                                    </widget>
+                                </item>
+                                <item>
+                                    <widget class="QPushButton" name="D_sharp">
+                                        <property name="sizePolicy">
+                                            <sizepolicy hsizetype="Maximum" vsizetype="Minimum">
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                        </property>
+                                        <property name="styleSheet">
+                                            <string notr="true">background-color: rgb(0, 0, 0);color: rgb(255, 255, 255);</string>
+                                        </property>
+                                        <property name="text">
+                                            <string>D#</string>
+                                        </property>
+                                    </widget>
+                                </item>
+                                <item>
+                                    <widget class="QPushButton" name="F_sharp_2">
+                                        <property name="sizePolicy">
+                                            <sizepolicy hsizetype="Maximum" vsizetype="Minimum">
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                        </property>
+                                        <property name="styleSheet">
+                                            <string notr="true">background-color: rgb(0, 0, 0);color: rgb(255, 255, 255);</string>
+                                        </property>
+                                        <property name="text">
+                                            <string>F#</string>
+                                        </property>
+                                    </widget>
+                                </item>
+                                <item>
+                                    <widget class="QPushButton" name="G_sharp">
+                                        <property name="sizePolicy">
+                                            <sizepolicy hsizetype="Maximum" vsizetype="Minimum">
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                        </property>
+                                        <property name="styleSheet">
+                                            <string notr="true">background-color: rgb(0, 0, 0);color: rgb(255, 255, 255);</string>
+                                        </property>
+                                        <property name="text">
+                                            <string>G#</string>
+                                        </property>
+                                    </widget>
+                                </item>
+                                <item>
+                                    <widget class="QPushButton" name="A_sharp">
+                                        <property name="sizePolicy">
+                                            <sizepolicy hsizetype="Maximum" vsizetype="Minimum">
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                        </property>
+                                        <property name="styleSheet">
+                                            <string notr="true">background-color: rgb(0, 0, 0);color: rgb(255, 255, 255);</string>
+                                        </property>
+                                        <property name="text">
+                                            <string>A#</string>
+                                        </property>
+                                    </widget>
+                                </item>
+                            </layout>
+                        </item>
+                        <item>
+                            <layout class="QHBoxLayout" name="horizontalLayout">
+                                <item>
+                                    <widget class="QPushButton" name="C">
+                                        <property name="sizePolicy">
+                                            <sizepolicy hsizetype="Maximum" vsizetype="Minimum">
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                        </property>
+                                        <property name="minimumSize">
+                                            <size>
+                                                <width>0</width>
+                                                <height>18</height>
+                                            </size>
+                                        </property>
+                                        <property name="text">
+                                            <string>C</string>
+                                        </property>
+                                    </widget>
+                                </item>
+                                <item>
+                                    <widget class="QPushButton" name="D">
+                                        <property name="sizePolicy">
+                                            <sizepolicy hsizetype="Maximum" vsizetype="Minimum">
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                        </property>
+                                        <property name="text">
+                                            <string>D</string>
+                                        </property>
+                                    </widget>
+                                </item>
+                                <item>
+                                    <widget class="QPushButton" name="E">
+                                        <property name="sizePolicy">
+                                            <sizepolicy hsizetype="Maximum" vsizetype="Minimum">
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                        </property>
+                                        <property name="text">
+                                            <string>E</string>
+                                        </property>
+                                    </widget>
+                                </item>
+                                <item>
+                                    <widget class="QPushButton" name="F">
+                                        <property name="sizePolicy">
+                                            <sizepolicy hsizetype="Maximum" vsizetype="Minimum">
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                        </property>
+                                        <property name="text">
+                                            <string>F</string>
+                                        </property>
+                                    </widget>
+                                </item>
+                                <item>
+                                    <widget class="QPushButton" name="G">
+                                        <property name="sizePolicy">
+                                            <sizepolicy hsizetype="Maximum" vsizetype="Minimum">
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                        </property>
+                                        <property name="text">
+                                            <string>G</string>
+                                        </property>
+                                    </widget>
+                                </item>
+                                <item>
+                                    <widget class="QPushButton" name="A">
+                                        <property name="sizePolicy">
+                                            <sizepolicy hsizetype="Maximum" vsizetype="Minimum">
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                        </property>
+                                        <property name="text">
+                                            <string>A</string>
+                                        </property>
+                                    </widget>
+                                </item>
+                                <item>
+                                    <widget class="QPushButton" name="B">
+                                        <property name="sizePolicy">
+                                            <sizepolicy hsizetype="Maximum" vsizetype="Minimum">
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                        </property>
+                                        <property name="text">
+                                            <string>B</string>
+                                        </property>
+                                    </widget>
+                                </item>
+                            </layout>
+                        </item>
+                    </layout>
+                </item>
+                <item row="0" column="0" colspan="2">
                     <widget class="QLabel" name="label">
                         <property name="text">
                             <string>Virtual Piano</string>

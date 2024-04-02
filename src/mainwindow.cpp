@@ -17,9 +17,10 @@ MainWindow::MainWindow(QWidget *parent) :
 
   record_button = std::make_unique<QPushButton>();
 
-  auto central_widget = findChild<QWidget*>("centralwidget");
+  /*auto central_widget = findChild<QWidget*>("centralwidget");
   auto grid_layout = central_widget->findChild<QGridLayout*>("gridlayout");
   grid_layout->addWidget(piano.release(), 3, 0);
+*/
 
   //grid_layout->addWidget(record_button.release(), 1, 0, 1, 2);
   /*
